@@ -1,7 +1,12 @@
-        3 урок  закончил 1.30
+
+
+
+    3 урок Анатаций и TestNG (Домашки тут нет )
+ TestNG нейки фрейморк который помогает запускать тесты 
+ Анатаций это нейкий этапом подготовки к выполнению теста 
 https://mvnrepository.com/repos/central тут есть все зависимости для maven
 https://maven.apache.org/download.cgi - Binary zip archive для установки maven
-https://t.me/c/1786276747/313 ссылку на сообщение 
+https://t.me/c/1786276747/313 ссылку на сообщение в тг
 добавляем в pom:
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -52,3 +57,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
         </plugins>
     </build>
 </project>
+
+    4 урок Анатаций и TestNG продолжение 3 урока 
+https://t.me/c/1786276747/344 ссылку на сообщение в тг
+https://habr.com/ru/company/otus/blog/450872/
+
+
+
+
