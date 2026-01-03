@@ -21,6 +21,20 @@
             <artifactId>testng</artifactId>
             <version>7.6.1</version>
         </dependency>
+        <!-- Добавляем зависимость selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.14.1</version>
+        </dependency>
+
+        <!-- Тут именно запуск веб драйвера, что бы запустить автоматическое скачивание версий браузера -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.5.3</version>
+        </dependency>
+
     </dependencies>
 
     <build>

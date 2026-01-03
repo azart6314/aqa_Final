@@ -58,9 +58,15 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     </build>
 </project>
 
-    4 урок Анатаций и TestNG продолжение 3 урока 
+    4 урок Анатаций и TestNG продолжение 3 урока  И начало 4 SeleniumWeb driver
 https://t.me/c/1786276747/344 ссылку на сообщение в тг
 https://habr.com/ru/company/otus/blog/450872/
+
+  рассказывает как скидывать домашку 1.40 
+
+1) Реализовать два метода div(int a, int b) and div(double a, double b) в классе Calculator
+2) Написать тесты на валидацию данных методов с использованием всех изученных атрибутов
+   Обязательно проверить деление на 0
 
 
 
