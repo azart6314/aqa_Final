@@ -29,7 +29,7 @@ public class BrowserFactory {
                 chromeOptions.addArguments("--silent"); // работать молче без запросов или вопросов
                 chromeOptions.addArguments("--start-maximized");// метот который развернет на максы
 
-                driver = new ChromeDriver(chromeOptions); // возвращает все эти пораметры
+                driver = new ChromeDriver(chromeOptions); // возвращает все эти параметры
 
                 break; // завершение
             case "firefox":
@@ -48,7 +48,6 @@ public class BrowserFactory {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies(); //всегда удоляет куки после запуска драйвера
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); //по умолчанию 10 сек стоит
-
         return driver;
     }
 }
