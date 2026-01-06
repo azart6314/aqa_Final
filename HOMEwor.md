@@ -70,7 +70,7 @@ https://habr.com/ru/company/otus/blog/450872/
     5 урок  Селениум веб драйвер продолжаем в лессон 4 
 https://t.me/c/1786276747/374
 https://clinic-cvetkov.ru/company/kalkulyator-imt/ - ссылка из видео где делаем первый тест на уроке 
-закончил на 2.02
+
 Написать следующие тесты по сценариям ниже:
 
 Открыть сайт https://kermi-fko.ru/raschety/Calc-Rehau-Solelec.aspx
