@@ -93,6 +93,51 @@ https://clinic-cvetkov.ru/company/kalkulyator-imt/ - ссылка из виде�
 Проверить результаты: ‘Количество упаковок ламината: 7’
 Закрыть окно браузера
 
+    6 урок продолжаем локаторы CSS and XPath
+https://t.me/c/1786276747/426
+
+Создать отдельный тестовый Java-класс Task_8 с тестом, сценарий:
+Залогиниться https://www.saucedemo.com/
+Добавить товар в корзину
+Перейти в корзину
+Проверить (assertEquals) стоимость товара и его имя в корзине
+Выполнить поиск локаторов по следующим критериям (тест должен включать хотя  бы один локатор из списка и из подсписка):       
+id
+name
+classname
+tagname
+linktext
+partiallinktext
+xpath
+Поиск по атрибуту, например By.xpath("//tag[@attribute='value']");
+Поиск по тексту, например By.xpath("//tag[text()='text']");
+Поиск по частичному совпадению атрибута, например By.xpath("//tag[contains(@attribute,'text')]");
+Поиск по частичному совпадению текста, например By.xpath("//tag[contains(text(),'text')]");
+ancestor, например //*[text()='Enterprise Testing']//ancestor::div
+descendant
+following
+parent
+preceding
+*поиск элемента с условием AND, например //input[@class='_2zrpKA _1dBPDZ' and @type='text']
+(Подсказка:  XPath Axes)
+css
+.class
+.class1.class2
+.class1 .class2
+#id
+tagname
+tagname.class
+[attribute=value]
+[attribute~=value]
+[attribute|=value]
+[attribute^=value]
+[attribute$=value]
+[attribute*=value]
+(Подсказка: https://www.w3schools.com/cssref/css_selectors.asp)
+
+
+
+
 
 
 
