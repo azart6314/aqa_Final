@@ -136,6 +136,14 @@ tagname.class
 (Подсказка: https://www.w3schools.com/cssref/css_selectors.asp)
 
 
+    7 урок  1/03
+https://t.me/c/1786276747/506
+
+домашка:
+1 Написать тест сценарий на один позитивный E2E тест для приложения https://www.saucedemo.com и разместить его в своем файле README.md в корне проекта
+2 Реализовать данный тест с использованием PageObject и Steps.
+
+
 
 
 
