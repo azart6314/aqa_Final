@@ -19,15 +19,11 @@ public class LoginTest extends BaseTest {
     public void loginTest() throws InterruptedException {
 
         LoginPage loginPage = new LoginPage(driver);
-        driver.findElement(By.id("name")).sendKeys(ReadProperties.username());
-        //loginPage.getEmailInput().sendKeys(ReadProperties.username());
-        Thread.sleep(3000);
+        loginPage.getEmailInput().click();
+        loginPage.getEmailInput().sendKeys(ReadProperties.username());
         loginPage.getPassword().sendKeys(ReadProperties.password());
-        Thread.sleep(3000);
         loginPage.getLogInButton().click();
-        Thread.sleep(4000);
-
-        //Assert.assertTrue(new DashboardPage(driver).isPageOpened());
+        Assert.assertTrue(new DashboardPage(driver).isPageOpened());
 
         //удалили после 1 модернизаций в  loginPage
 //        driver.findElement(By.id("name")).sendKeys(ReadProperties.username());
@@ -37,6 +33,14 @@ public class LoginTest extends BaseTest {
         //Assert.assertTrue(new DashboardPage(driver).isPageOpened()); До изменения не сохранил  //*[@id="cross_report_content_inner"]/div/div[1]/a[1]
 
     }
+
+  /*  //после того как перенес в степы загорелась ошибка и не актуален тест. Верно будет в loginSuccessfulTest
+    @Test
+    public void loginSuccessfulTest0() {
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.loginSuccessfulTest(ReadProperties.username(), ReadProperties.password());
+        Assert.assertTrue(new DashboardPage(driver).isPageOpened());
+    }*/
 
     @Test
     public void loginSuccessfulTest() {

@@ -11,7 +11,6 @@ public class BaseTest {
     protected WebDriver driver;
     protected UserStep userStep;
 
-    private final int WAIT_TIMEOUT = 10;
 
 
     @BeforeMethod

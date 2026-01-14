@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.sql.Struct;
+
 public class LoginPage extends BasePage {
 
     // Блок описания локаторов для эментов (обычно приветные финальные значения для by)
@@ -37,6 +39,14 @@ public class LoginPage extends BasePage {
     public WebElement getPassword() { return driver.findElement(passwordInputLocator);}
     public WebElement getLogInButton() { return driver.findElement(logInButtonLocator);}
     public WebElement getErrorTextElement() { return driver.findElement(errorTextLocator); }
+
+  /*  // переносится в юзер степ
+    public void loginSuccessfulTest(String email, String psw) {
+        getEmailInput().click();
+        getEmailInput().sendKeys(email);
+        getPassword().sendKeys(psw);
+        getLogInButton().click();
+    }*/
 
 
 

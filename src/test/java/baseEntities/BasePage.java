@@ -11,7 +11,7 @@ import steps.UserStep;
 import java.time.Duration;
 
 public abstract class BasePage {
-    /*private static final long WAIT_TIMEOUT = 10 ;*/
+
     //abstract - оставляет возможность не реализовывать какие то методы и заставить это реализовывать в дочерниъ методах
 
     protected WebDriver driver;
@@ -26,15 +26,6 @@ public abstract class BasePage {
         return driver.findElement(getPageIdentifier()).isDisplayed();
     }
 
-   /* public boolean isPageOpened() {
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_TIMEOUT));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(getPageIdentifier()));
-            return true;
-        } catch (TimeoutException e) {
-            return false;
-        }
-    }*/
 
     //метод для перехода по страницам через урл
     public void openPageByUrl(String pagePath){

@@ -6,6 +6,9 @@ import pages.DashboardPage;
 import pages.LoginPage;
 
 public class UserStep extends BaseStep {
+    // в UserStep проверок не должно быть не каких. Только шаги. все проверки в тестах
+
+
     private LoginPage loginPage;
 
     public UserStep(WebDriver driver) {
@@ -14,7 +17,10 @@ public class UserStep extends BaseStep {
         loginPage = new LoginPage(driver);
     }
 
+
+
     public void login(String email, String psw) {
+        loginPage.getEmailInput().click();
         loginPage.getEmailInput().sendKeys(email);
         loginPage.getPassword().sendKeys(psw);
         loginPage.getLogInButton().click();
