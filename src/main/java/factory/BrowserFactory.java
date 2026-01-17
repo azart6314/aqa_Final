@@ -22,7 +22,7 @@ public class BrowserFactory {
 
                 // ниже идут модернизация бразуреа. Праметры которые нам нужны для работы. Можно посмотреть настройки на steak over flou
                 ChromeOptions chromeOptions = new ChromeOptions();
-               // chromeOptions.addArguments("--incognito"); // Добавление аргумента инкогнито
+                chromeOptions.addArguments("--incognito"); // Добавление аргумента инкогнито
                 //chromeOptions.setHeadless(ReadProperties.isHeadless());
                 chromeOptions.addArguments("--disable-gpu"); // отключает графический процессор
                 //chromeOptions.addArguments("--window-size=1920,1200"); //размер открывшегося браузера

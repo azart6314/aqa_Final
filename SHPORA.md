@@ -13,6 +13,11 @@ Assert.assertEquals(calculator.sum(2, 3), 5, "Невернная сумма ..."
 
 //mvn clean test  - ЗАПУСКАЕТ ВСЕ ТЕСТЫ В ПРОЕКТЕ С АНАТАЦИЕЙ @Test
 
+🔹 assertEquals — сравниваю данные
+🔹 assertTrue — проверяю состояние
+🔹 assert’ы НЕ пишут в Page Object
+🔹 assert’ы живут в Test / Steps
+
 // Assert.   -- очень много методов для проверок
 //true -если проверить актуальный результат
 //Equals  - сравнить ожидаемый и вактический результат

@@ -30,7 +30,6 @@ public class UserStep extends BaseStep {
 
     public DashboardPage loginSuccessful(String email, String psw) {
         login(email, psw);
-
         return new DashboardPage(driver);
     }
 
