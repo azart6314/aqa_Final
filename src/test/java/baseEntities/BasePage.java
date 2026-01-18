@@ -6,6 +6,7 @@ import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import services.WaitsService;
 import steps.UserStep;
 
 import java.time.Duration;
@@ -15,15 +16,18 @@ public abstract class BasePage {
     //abstract - оставляет возможность не реализовывать какие то методы и заставить это реализовывать в дочерниъ методах
 
     protected WebDriver driver;
+    protected WaitsService waitsService;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        waitsService = new WaitsService(driver);
     }
 
     protected abstract By getPageIdentifier(); //каждый клас будет сам проверять что надо
 
     public boolean isPageOpened(){
-        return driver.findElement(getPageIdentifier()).isDisplayed();
+        // return driver.findElement(getPageIdentifier()).isDisplayed();
+        return waitsService.waitForVisibilityBy(getPageIdentifier()).isDisplayed();
     }
 
 

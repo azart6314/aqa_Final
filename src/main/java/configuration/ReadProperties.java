@@ -34,4 +34,9 @@ public class ReadProperties {
     public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
     }
+
+    //преоброзовали таймаут и перевели его в числинное чило int
+    public static int timeout() {
+        return Integer.parseInt( properties.getProperty("timeout"));
+    }
 }

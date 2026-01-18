@@ -35,10 +35,16 @@ public class LoginPage extends BasePage {
         }*/
 
     // Блок атомарных методов //поиск элементов или какое-то одно простое действие
-    public WebElement getEmailInput() { return  driver.findElement(emailInputLocator);}
+    /*public WebElement getEmailInput() { return  driver.findElement(emailInputLocator);}
     public WebElement getPassword() { return driver.findElement(passwordInputLocator);}
     public WebElement getLogInButton() { return driver.findElement(logInButtonLocator);}
-    public WebElement getErrorTextElement() { return driver.findElement(errorTextLocator); }
+    public WebElement getErrorTextElement() { return driver.findElement(errorTextLocator); }*/
+
+    // Он теперь не просто говорит что он есть в дом модели waitForVisibility говорит нам есть ли он на странице и можем ли мы с ним работать
+    public WebElement getEmailInput() { return waitsService.waitForVisibilityBy(emailInputLocator);}
+    public WebElement getPassword() { return waitsService.waitForVisibilityBy(passwordInputLocator);}
+    public WebElement getLogInButton() { return waitsService.waitForVisibilityBy(logInButtonLocator);}
+    public WebElement getErrorTextElement() { return waitsService.waitForVisibilityBy(errorTextLocator); }
 
   /*  // переносится в юзер степ
     public void loginSuccessfulTest(String email, String psw) {

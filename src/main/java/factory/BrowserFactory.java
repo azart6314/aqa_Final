@@ -48,7 +48,9 @@ public class BrowserFactory {
     public WebDriver getDriver() { //getDriver метод который вернет уже полностью готовый драйвер для работы можно глянуть в  @Test public void browserFactoryWDTest() {
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies(); //всегда удоляет куки после запуска драйвера
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); //по умолчанию 10 сек стоит
+        //implicitlyWait не явное ожидание
+        // работает для всех findElement если не находит какой то элемент ждет 10 сек
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(0));//по умолчанию 10 сек стоит
         return driver;
     }
 }
