@@ -13,7 +13,7 @@ public class AlertTests extends BaseTest {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         //поиск кнопки после нажатия которой появляется алерт
         driver.findElement(By.cssSelector("button[onclick='jsAlert()']")).click();
-        //создаем новый объект класса аддерт который полуется при свиче драйвера на аллерт
+        //создаем новый объект класса аллерт который получается при свиче драйвера на аллерт
         Alert alert = driver.switchTo().alert();
         //проверяем на текст который появляется в аллерте
         Assert.assertEquals(alert.getText(), "I am a JS Alert");

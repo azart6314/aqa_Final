@@ -69,3 +69,22 @@ public void paramTest(@Optional("default_user") String Login, //@Optional - по
 System.out.println("Login is:" +Login);
 System.out.println("Psw is:" +psw);
 }
+
+
+            CSS Selectors
+//<p href=”value”> (p -тег; href- атрибут; value -значение атрибута)
+// id - #id (By.cssSelector); - [id='My-Address']  (By.cssSelector); - id (By.id)
+// class name - .newsletter (cssSelector)можно множество; - newsletter (className);
+// tage name - //h1 (cssSelector и tagName) по селектору именно этот тэг в не текста
+// tage name и значению атрибута - div.intro (cssSelector) 1.тэг 2.значение атрибута
+// tage name and id - p#my-Address (cssSelector) 1.тэг 2.id
+// id и значению атрибута - #Lastname .markup (cssSelector) 1.id пробел 2.значение атрибута
+// по двум значения атрибата в иерархий - .intro .markup (cssSelector) в начале родительское значение атрибута потом ниже  значение атрибута
+// Поск всех элементов с tagname <h1 OR(логичиское или) <p - h1, p (cssSelector) 1.тэг пробел 2.тэг
+// Поиск родительского и подротительского tage - div > p (cssSelector); 1.Родительский tag 2.Подродительский TAG
+// Поиск всех элементов с тэгом P которые сразу идут за тэгом ul - ul + p (cssSelector) 1.Тэг плюс 2.подродительский тэг
+// Поиск по атрибуду и его значению - [lang='it'] (cssSelector); в начале можно указать тэг p[lang='it']
+// Поиск по Тэгу и Атрибуту -  p[lang] (cssSelector) Чисто тэги и атрибут без значение
+// Поиск по всем одинаковым Атрибутам и Его значением - [style='overflow: auto;'] (cssSelector); 1.Атрибут 2.Все его значения
+// Поиск по ID со часть окончания его значения - [id$='ess'] (cssSelector); 1.ID 2.концовказначения Атрибута
+// Поиск по ID с начаниющей частью Атрибута - [id^=L] (cssSelector); 1.ID 2.начало Атрибута

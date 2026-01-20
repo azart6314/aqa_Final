@@ -44,6 +44,7 @@ public class WaitsService { //класс в которы добавляем вс
         return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 
+
     //явная ожидалка которая просто проверяет что элемент находится в дом модели и не проверяет ее состояние
     public WebElement waitForExists(By locator) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -58,6 +59,21 @@ public class WaitsService { //класс в которы добавляем вс
 
         return fluent.until(driver -> driver.findElement(by));
     }
+
+    //моя ожидалка что елемент отображается id
+    public WebElement waitForVisibilityID(By id) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(id));
+    }
+
+    //моя ожидалка что елемент исчез
+    public boolean waitForElementInvisibleCss(By cssSelector) {
+        return wait.until(ExpectedConditions.invisibilityOfElementLocated(cssSelector));//делаем проверку по веб элементу(могем по локатору но тут такое себе ) //invisibilityOf можно менять
+    }
+
+    //моя ожидалка
+  /*  public boolean waitForElementIsDisabledCss (By cssSelector) {
+        return wait.until(ExpectedConditions.
+    }*/
 
 
 
