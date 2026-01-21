@@ -3,6 +3,7 @@ package tests;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
 import baseEntities.BaseTest;
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
+import steps.UserStep;
 
 public class LoginTest extends BaseTest {
 
@@ -42,14 +44,20 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(new DashboardPage(driver).isPageOpened());
     }*/
 
-    //@Test
+    @Test(description = "Description") //меняет само название в отчете
+    @Issue("AQA18-12") //Тут указываем с каким багом связан
+    @TmsLink("TC-001") //Тест кейс указываем с которым связан этот тест //Базову часть указываем в алюре тут вторая часть
+    @Description ("Description1") //попадает в сам тест как более детолезированное описание в отчете
+    @Link("https://onliner.by") //указываем просто ссылку которая отображается просто как ссылка
+    @Link(name ="catalog", type = "mylink", url = "https://oliner.by")// реальная ссылка будет по нажаттию которой мы перейдем
+    @Severity(SeverityLevel.BLOCKER) //тесты в отчете можно будет отфильтровать по важности
     public void loginSuccessfulTest() {
         Assert.assertTrue(
                 userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password())
                         .isPageOpened());
 
     }
-   // @Test
+    @Test
     public void loginIncorrectTest() {
         Assert.assertEquals(
                 userStep.loginIncorrect(ReadProperties.username(), "qwewqqqw")

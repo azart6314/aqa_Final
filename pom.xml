@@ -12,6 +12,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--<aspectj.version>1.9.5</aspectj.version> -->
         <aspectj.version>1.8.10</aspectj.version>
         <!-- Знак $ говорит что буду использовать пропирти и тут лучше видно все версий что бы не искать все по помке -->
         <!-- selenium.version>$</selenium.version -->
@@ -29,6 +30,12 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.14.1</version>
+        </dependency>
+        <!-- завмсимость для отчетов allure -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.23.0</version>
         </dependency>
 
         <!-- Тут именно запуск веб драйвера, что бы запустить автоматическое скачивание версий браузера -->

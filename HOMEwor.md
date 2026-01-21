@@ -233,6 +233,8 @@ File Download (с зорачкай)
 
       9 Урок Maven + Reporting
 https://t.me/c/1786276747/563
+allure serve  - команда для открытия алюра в вебе  Ctr + c остановить запуск ( после смены места папки ):
+allure serve/target/allure-results
 
 
 

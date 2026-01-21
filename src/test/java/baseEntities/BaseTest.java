@@ -3,6 +3,7 @@ package baseEntities;
 import configuration.ReadProperties;
 import factory.BrowserFactory;
 import org.openqa.selenium.WebDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import services.WaitsService;
@@ -16,12 +17,14 @@ public class BaseTest {
 
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp(ITestContext iTestContext){
         driver = new BrowserFactory().getDriver();
-       // driver.get(ReadProperties.getUrl());
         waitsService = new WaitsService(driver);
-        userStep = new UserStep(driver);
+        driver.get(ReadProperties.getUrl());
 
+        iTestContext.setAttribute("driver", driver);
+
+        userStep = new UserStep(driver);
         System.out.println(driver.hashCode());
     }
 
