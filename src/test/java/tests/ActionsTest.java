@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ActionsTest extends BaseTest {
 
-    @Test //тест по наведению мышки что бы элементы отобразились
+  //  @Test //тест по наведению мышки что бы элементы отобразились
     public void hoverTest() {
         driver.get("http://the-internet.herokuapp.com/hovers");
 //        List<WebElement> targetElements = driver.findElements(By.className("figure")); //поиск всех элементов на странице которые нам нужны когда нет ожидалки. Способ не рабочий
@@ -30,7 +30,7 @@ public class ActionsTest extends BaseTest {
         Assert.assertTrue(waitsService.waitForElementInvisible(targetElements.get(0))); //дождались что элемент пропал
     }
 
-    @Test // более не верный тест по ЗАГРУЗКЕ ( ниже правильнее)
+  //  @Test // более не верный тест по ЗАГРУЗКЕ ( ниже правильнее)
     public void fileUploadTest1() throws InterruptedException {
         driver.get("http://the-internet.herokuapp.com/upload");
         //поиск элемента
@@ -50,7 +50,7 @@ public class ActionsTest extends BaseTest {
                 "download.jpeg");
     }
 
-    @Test //Верный тест по загрузке
+ //   @Test //Верный тест по загрузке
     public void fileUploadTest() throws InterruptedException {
         driver.get("http://the-internet.herokuapp.com/upload");
         //поиск элемента

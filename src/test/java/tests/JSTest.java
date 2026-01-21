@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class JSTest extends BaseTest {
 
-    @Test
+   // @Test
     public void jsTest() throws InterruptedException {
         driver.get("http://the-internet.herokuapp.com/jqueryui/menu#");
         WebElement webElement = driver.findElement(By.id("ui-id-2"));

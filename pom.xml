@@ -13,9 +13,12 @@
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.8.10</aspectj.version>
+        <!-- Знак $ говорит что буду использовать пропирти и тут лучше видно все версий что бы не искать все по помке -->
+        <!-- selenium.version>$</selenium.version -->
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
@@ -47,6 +50,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <!--suiteXmlFiles>
+                        <suiteXmlFile> ${suiteXmlFile} </suiteXmlFile>
+                    </suiteXmlFiles-->
 
                 </configuration>
                 <dependencies>
