@@ -237,6 +237,11 @@ allure serve  - команда для открытия алюра в вебе  C
 allure serve/target/allure-results
 
 
+      10 урок wrappers Обертки
+https://t.me/c/1786276747/592
+
+
+
 
 
 

@@ -12,6 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
+import pages.project.AddProjectPage;
+import steps.NavigationSteps;
 import steps.UserStep;
 
 public class LoginTest extends BaseTest {
@@ -64,6 +66,24 @@ public class LoginTest extends BaseTest {
                         .getErrorTextElement().getText(),
                 "Email/Login or Password is incorrect. Please try again."
         );
+    }
+
+    @Test
+    public void addProjectTest() {
+        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        projectSteps.addProject("WP_01");
+
+        Assert.assertEquals(driver.findElement(By.className("page_title")).getText(),
+                "WP_01");
+    }
+
+    @Test
+    public void radioButtonTest() {
+        userStep.loginSuccessful(ReadProperties.username(), ReadProperties.password());
+        AddProjectPage page = new NavigationSteps(driver).navigateToAddProjectPage();
+        page.getType().selectByIndex(1);
+        page.getType().selectByValue("3");
+        page.getType().selectByText("Use a single repository for all cases (recommended)");
     }
 
 

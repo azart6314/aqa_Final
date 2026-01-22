@@ -1,6 +1,7 @@
 package pages;
 
 import baseEntities.BasePage;
+import elements.UIElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -41,10 +42,11 @@ public class LoginPage extends BasePage {
     public WebElement getErrorTextElement() { return driver.findElement(errorTextLocator); }*/
 
     // Он теперь не просто говорит что он есть в дом модели waitForVisibility говорит нам есть ли он на странице и можем ли мы с ним работать
-    public WebElement getEmailInput() { return waitsService.waitForVisibilityBy(emailInputLocator);}
-    public WebElement getPassword() { return waitsService.waitForVisibilityBy(passwordInputLocator);}
-    public WebElement getLogInButton() { return waitsService.waitForVisibilityBy(logInButtonLocator);}
-    public WebElement getErrorTextElement() { return waitsService.waitForVisibilityBy(errorTextLocator); }
+    // Блок атомарных методов //поиск элементов // теперь находим элемент и сразу проверяем на отображение (waitsService)/используем ток в том случае если
+    public UIElement getEmailInput() { return new UIElement(driver, emailInputLocator);}
+    public UIElement getPassword() { return new UIElement(driver, passwordInputLocator);}
+    public UIElement getLogInButton() { return new UIElement(driver, logInButtonLocator);}
+    public UIElement getErrorTextElement() { return new UIElement(driver, errorTextLocator);}
 
   /*  // переносится в юзер степ
     public void loginSuccessfulTest(String email, String psw) {
